@@ -4,9 +4,7 @@
 A way to help the user create a logo for a company or personal website and generate results.
 ## Table of Contents:
 - [Overview](#Overview)
-- [Challenge](#Challenge)
-- [Usage](#Usage)
-- [Installation](#Installation)
+- [Questions](#questions)
 
 ## User Story
 `````` md 
@@ -31,9 +29,6 @@ AND the output text "Generated logo.svg" is printed in the command line
 WHEN I open the `logo.svg` file in a browser
 THEN I am shown a 300x200 pixel image that matches the criteria I entered
 ``````
-
-## Installation
-
 
 ## Questions
 If you have any questions, feel free to contact me:
