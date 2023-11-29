@@ -82,4 +82,24 @@ async function init() {
         console.log('No shape selected');
         return;
     } 
+
+    userShape.setColor(userShapeColor);
+
+    const customSvgInstance = new customSvgFile();
+
+    customSvgInstance.setTextElement(userText, userFontColor);
+
+    customSvgInstance.setShapeElement(userShape);
+
+    customSvgString = customSvgInstance.render();
+
+    console.log('Displaying shape:' + customSvgString)
+
+    console.log('Custom shape generatoin complete!');
+
+    console.log('Writing custom shape to file...');
+
+    writeToCustomFile(customSvgFile, customSvgString);
 }
+
+initialize();
