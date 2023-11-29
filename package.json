@@ -1,16 +1,18 @@
 {
+  "dependencies": {
+    "inquirer": "^9.2.12"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
   "name": "logo-maker",
+  "description": "## Description A way to help the user create a logo for a company or personal website and generate results. ## Table of Contents: - [Overview](#Overview) - [Challenge](#Challenge) - [Usage](#Usage) - [Installation](#Installation)",
   "version": "1.0.0",
-  "description": "## Your Task",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "inquirer": "^9.2.12",
-    "jest": "^29.7.0"
-  }
+  "license": "ISC"
 }

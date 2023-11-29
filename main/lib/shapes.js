@@ -9,19 +9,19 @@ class CustomShape{
 
 class CustomTriangle extends CustomShape {
     render() {
-        return ``
+        return `<polygon height="100%" width="100%" points="0,200 300,200 150,0" fill="${this.customColor}">>`
     };
 }; 
 
 class CustomCircle extends CustomShape {
     render() {
-        return ``
+        return `<circle cx="50%" cy="50%" r="100" height="100%" width="100%" fill="${this.customColor}">`
     };
 };
 
 class CustomSquare extends CustomShape {
     render() {
-        return ``
+        return `<rect x="50" height="200" width="200" fill="${this.customColor}">`
     };
 };
 

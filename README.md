@@ -1,4 +1,4 @@
-# ReadME Generator
+# Logo Creator
 
 ## Description
 A way to help the user create a logo for a company or personal website and generate results.
