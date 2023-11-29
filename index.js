@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const { Circle, Triangle, Square } = require('./main/lib/shapes');
+const { CustomCircle, CustomTriangle, CustomSquare } = require('./main/lib/shapes');
 
 
 class svg{
@@ -45,3 +45,41 @@ const questions = [
         choices: ['Square', 'Circle', 'Triangle'],
     },
 ];
+
+function writeToFile (filename, data){
+    console.log('Applying [' + data + ' ] to file [' + fileName + ']');
+    fs.writeFile(fileName, data, function (err){
+        if (err) {
+            return console.log(err)
+        }
+        console.log('Yay! You have created a custom-logo.svg!')
+    });
+}
+async function init() {
+    console.log('Starting Initialization')
+    let customSvgString = '';
+    
+    const customSvgFile = 'custom-logo.svg';
+
+    const userAnswers = await inquirer.createPromptModule(userQuestions);
+
+    const userText = userAnswers.userText;
+    const userFontColor = userAnswers.userTextColor;
+    const userShapeColor = userAnswers.userShapeColor;
+    const userShapeType = userAnswers.userShapeType;
+
+    let userShape;
+    
+    if (userShapeType === 'Custom Circle') {
+        userShape = new CustomCircle();
+        console.log('Selected Custom Circle shape');
+    } else if (userShapeType === 'Custom Square') {
+        userShape = new CustomSquare();
+        console.log ('Selected Custom Square shape')
+    } else if (userShapeType === 'Custom Triagle') {
+        userShape - new CustomTriangle();
+    } else{
+        console.log('No shape selected');
+        return;
+    } 
+}
